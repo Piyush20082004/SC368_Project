@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #F5F5F5; /* Light grey for a soothing backdrop */
+    color: #4B4B4B; /* Dim grey for text */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2b056c; /* Navy Blue */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header .logo-text {
+    font-size: 1.5rem;
+}
+header .nav {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+/* Updated Navigation Links */
+header .nav li a {
+    color: #FFD700; /* Gold color for prosperity and visibility */
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+header .nav li a:hover {
+    background-color: #4B4B4B; /* Dim grey for a sleek contrast */
+    color: #FFFFFF; /* Switch to white for hover effect */
+    text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.8); /* Glow effect */
+}
+
+/* Dropdown Menu */
+#dropdownMenu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    list-style: none;
+    display: none;
+}
+#dropdownMenu.show {
+    display: block;
+}
+#dropdownMenu li a {
+    color: #4B4B4B;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+}
+#dropdownMenu li a:hover {
+    background-color: #F0F0F0;
+    color: #333333;
+}
+/* Hero Section */
+#mainContent {
+    background-color: #7117ad;
+    color: #333333;
+    text-align: center;
+    padding: 40px 20px;
+}
+#mainContent h2 {
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+#mainContent p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+#mainContent a {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25%;
+    color: white;
+    background-color: #fb0606da;
+    border-radius: 4px;
+    text-decoration: none;
+}
+#mainContent a:hover {
+    background-color: #fb0606e6;
+}
+
+/* Cards Section */
+.card {
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card-title {
+    color: #333333;
+    font-size: 1.25rem;
+}
+.card-text {
+    color: #4B4B4B;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #1A1A2E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+/* Small Devices (Smartphones) */
+@media (max-width: 576px) {
+    header .nav {
+        display: none; /* Hide nav by default */
+    }
+    header .nav.show {
+        display: block; /* Show nav on toggle */
+        flex-direction: column;
+        background-color: #1A1A2E;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+    }
+    header i.fas.fa-bars {
+        cursor: pointer;
+    }
+
+    #mainContent h2 {
+        font-size: 1.75rem;
+    }
+    #mainContent p {
+        font-size: 0.9rem;
+    }
+}
+/* Medium Devices (Tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    #mainContent h2 {
+        font-size: 2rem;
+    }
+}
+/* Large Devices (Desktops) */
+@media (min-width: 769px) {
+    .card {
+        margin-bottom: 40px;
+    }
+    .card-title {
+        font-size: 1.5rem;
+    }
+}
